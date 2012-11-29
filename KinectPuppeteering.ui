@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>375</width>
+    <height>306</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="KinectPuppeteeringViewer" name="widget" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="pushButton_loadmesh">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>Load Mesh</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_loadskel">
+       <property name="text">
+        <string>Load Skeleton</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_loadPose">
+       <property name="text">
+        <string>Load Pose</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QPushButton" name="pushButton_autorig">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="text">
+        <string>Auto Rig</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_loadrig">
+       <property name="text">
+        <string>Load Rig</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_saverig">
+       <property name="text">
+        <string>Save Rig</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KinectPuppeteeringViewer</class>
+   <extends>QWidget</extends>
+   <header>../KinectPuppeteeringViewer.h</header>
+   <container>1</container>
+   <slots>
+    <slot>LoadMesh()</slot>
+    <slot>LoadSkeleton()</slot>
+    <slot>AutoRig()</slot>
+    <slot>LoadPose()</slot>
+    <slot>SaveRig()</slot>
+    <slot>LoadRig()</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton_autorig</sender>
+   <signal>clicked()</signal>
+   <receiver>widget</receiver>
+   <slot>AutoRig()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>327</x>
+     <y>271</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>128</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_loadmesh</sender>
+   <signal>clicked()</signal>
+   <receiver>widget</receiver>
+   <slot>LoadMesh()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>72</x>
+     <y>271</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>128</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_loadskel</sender>
+   <signal>clicked()</signal>
+   <receiver>widget</receiver>
+   <slot>LoadSkeleton()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>200</x>
+     <y>271</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>128</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_loadPose</sender>
+   <signal>clicked()</signal>
+   <receiver>widget</receiver>
+   <slot>LoadPose()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>435</x>
+     <y>271</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>252</x>
+     <y>128</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_loadrig</sender>
+   <signal>clicked()</signal>
+   <receiver>widget</receiver>
+   <slot>LoadRig()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>187</x>
+     <y>277</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>187</x>
+     <y>110</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_saverig</sender>
+   <signal>clicked()</signal>
+   <receiver>widget</receiver>
+   <slot>SaveRig()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>304</x>
+     <y>277</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>187</x>
+     <y>110</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
